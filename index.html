@@ -3,60 +3,67 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Anna — Simple Landing Page</title>
-    <meta name="description" content="Anna — a clean, responsive landing page." />
+    <title>iBoy Technologies — Embedded Systems & AI for Modern Real Estate</title>
+    <meta name="description" content="iBoy Technologies designs software, PCBs, and cutting-edge embedded systems with AI integration for modern real estate." />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/favicon.ico" />
   </head>
   <body>
-    <header class="site-header">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" role="banner">
       <div class="container">
-        <a class="logo" href="#">Anna</a>
-        <nav class="nav">
-          <a href="#features">Features</a>
+        <a class="logo" href="#" aria-label="iBoy Technologies homepage">
+          <img src="assets/logo.svg" alt="iBoy Technologies logo" />
+          <span>iBoy Technologies</span>
+        </a>
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+          <a href="#features">Services</a>
           <a href="#about">About</a>
-          <a class="cta" href="#contact">Get Started</a>
+          <a class="cta" href="mailto:iboytechnologiesug@gmail.com">Get Started</a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <section class="hero">
         <div class="container">
-          <h1>Beautifully simple websites</h1>
-          <p class="lead">Launch faster with a tiny, responsive landing page built for attention.</p>
-          <p><a class="btn" href="#contact">Start free trial</a></p>
+          <div>
+            <h1>Embedded systems. Intelligent buildings.</h1>
+            <p class="lead">We design software, PCBs, and AI-enabled embedded solutions that modernize real estate — from smart sensors to predictive building automation.</p>
+            <p><a class="btn" href="mailto:iboytechnologiesug@gmail.com?subject=Consultation%20Request">Get a consultation</a></p>
+          </div>
         </div>
       </section>
 
-      <section id="features" class="features container">
+      <section id="features" class="features container" aria-label="Services">
         <div class="feature">
-          <h3>Responsive</h3>
-          <p>Looks great on phones, tablets, and desktop without extra setup.</p>
+          <h3>Software & Cloud</h3>
+          <p>Full‑stack software for device management, analytics, and tenant-facing applications.</p>
         </div>
         <div class="feature">
-          <h3>Fast</h3>
-          <p>Tiny, semantic markup and minimal CSS for speedy loads.</p>
+          <h3>PCB & Hardware Design</h3>
+          <p>Custom PCB design and prototyping optimized for reliability, cost, and manufacturability.</p>
         </div>
         <div class="feature">
-          <h3>Customizable</h3>
-          <p>Easy to change colors, text, and images to match your brand.</p>
+          <h3>Embedded AI</h3>
+          <p>On-device AI and edge intelligence for real‑time automation and predictive maintenance.</p>
         </div>
       </section>
 
       <section id="about" class="container about">
-        <h2>About Anna</h2>
-        <p>Anna is a minimal starting point for small projects, portfolios, or product landing pages. Use it as-is or extend it with your own styles and scripts.</p>
+        <h2>About iBoy Technologies</h2>
+        <p>iBoy Technologies is a multidisciplinary engineering team building hardware and software solutions that bring intelligence to modern real estate. We combine PCB engineering, embedded firmware, cloud services, and AI to deliver end-to-end systems that scale.</p>
       </section>
 
       <section id="contact" class="container contact">
         <h2>Get in touch</h2>
-        <p>Have questions or want a custom design? Email us at <a href="mailto:hello@example.com">hello@example.com</a>.</p>
+        <p>Have questions or want a custom design? Email us at <a href="mailto:iboytechnologiesug@gmail.com">iboytechnologiesug@gmail.com</a>.</p>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
       <div class="container">
-        <p>&copy; "Anna" — Built with ❤️</p>
+        <p>&copy; iBoy Technologies — Built with ❤️</p>
       </div>
     </footer>
   </body>
