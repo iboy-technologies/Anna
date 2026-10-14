@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- assets/hero-anim.svg - lightweight animated SVG illustration -->
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" aria-hidden="false" role="img">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#14b3d6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0a4d78" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="f1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b" />
+      <feBlend in="SourceGraphic" in2="b" mode="normal"/>
+    </filter>
+  </defs>
+
+  <!-- soft glowing background orb -->
+  <circle cx="600" cy="140" r="160" fill="url(#g1)" opacity="0.12"/>
+  <circle cx="140" cy="240" r="100" fill="#26a6d1" opacity="0.06"/>
+
+  <!-- nodes and connections -->
+  <g id="links" stroke="#0a4d78" stroke-opacity="0.6" stroke-width="2" fill="none">
+    <line x1="220" y1="320" x2="340" y2="260" />
+    <line x1="340" y1="260" x2="480" y2="310" />
+    <line x1="480" y1="310" x2="620" y2="230" />
+  </g>
+
+  <g id="nodes">
+    <circle cx="220" cy="320" r="18" fill="#0a4d78">
+      <animate attributeName="r" dur="3s" values="16;20;16" repeatCount="indefinite" />
+      <animate attributeName="opacity" dur="3s" values="0.85;1;0.85" repeatCount="indefinite" />
+    </circle>
+    <circle cx="340" cy="260" r="14" fill="#0a4d78">
+      <animate attributeName="r" dur="2.8s" values="12;16;12" repeatCount="indefinite" />
+    </circle>
+    <circle cx="480" cy="310" r="20" fill="#0a4d78">
+      <animate attributeName="r" dur="3.6s" values="18;24;18" repeatCount="indefinite" />
+    </circle>
+    <circle cx="620" cy="230" r="12" fill="#0a4d78">
+      <animate attributeName="r" dur="2.6s" values="10;14;10" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- device icons (simplified) -->
+  <g transform="translate(40,80)" fill="#ffffff" opacity="0.95">
+    <rect x="56" y="58" width="90" height="58" rx="10" fill="#0a4d78" />
+    <rect x="270" y="36" width="72" height="48" rx="8" fill="#1489ac">
+      <animate attributeName="y" dur="4s" values="36;30;36" repeatCount="indefinite"/>
+    </rect>
+    <rect x="430" y="86" width="92" height="64" rx="12" fill="#0a4d78" />
+  </g>
+
+  <!-- animated rotating element suggestive of AI/processing -->
+  <g transform="translate(520,420)" fill="none" stroke="#14b3d6" stroke-width="3" stroke-linecap="round" opacity="0.9">
+    <circle cx="0" cy="0" r="28" stroke-opacity="0.18"/>
+    <path d="M-18 0 A18 18 0 0 1 18 0" stroke-opacity="0.7">
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- subtle grid moving for depth -->
+  <g id="grid" stroke="#bff0ff" stroke-opacity="0.12" stroke-width="1">
+    <rect x="0" y="380" width="800" height="180" fill="none"/>
+    <g>
+      <line x1="0" y1="420" x2="800" y2="420" />
+      <line x1="0" y1="460" x2="800" y2="460" />
+      <line x1="0" y1="500" x2="800" y2="500" />
+      <animateTransform attributeName="transform" type="translate" values="0 0; -30 0; 0 0" dur="8s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+</svg>
