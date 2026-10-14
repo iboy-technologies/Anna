@@ -6,6 +6,8 @@
     <title>iBoy Technologies — Embedded Systems & AI for Modern Real Estate</title>
     <meta name="description" content="iBoy Technologies designs software, PCBs, and cutting-edge embedded systems with AI integration for modern real estate." />
     <link rel="stylesheet" href="styles.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="assets/favicon.png" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <meta name="theme-color" content="#0a4d78" />
@@ -29,45 +31,55 @@
     <main id="main">
       <section class="hero">
         <div class="container hero-grid">
-          <div class="hero-copy">
-            <h1>Embedded systems. Intelligent buildings.</h1>
-            <p class="lead">We design software, PCBs, and AI-enabled embedded solutions that modernize real estate — from smart sensors to predictive building automation.</p>
-            <p class="hero-ctas"><a class="btn" href="mailto:iboytechnologiesug@gmail.com?subject=Consultation%20Request">Get a consultation</a></p>
+          <div class="hero-copy" data-aos="fade-up" data-aos-delay="50">
+            <h1 data-aos="fade-up" data-aos-delay="120">Embedded systems. Intelligent buildings.</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">We design software, PCBs, and AI-enabled embedded solutions that modernize real estate — from smart sensors to predictive building automation.</p>
+            <p class="hero-ctas"><a class="btn" href="mailto:iboytechnologiesug@gmail.com?subject=Consultation%20Request" data-aos="zoom-in" data-aos-delay="300">Get a consultation</a></p>
           </div>
 
           <div class="hero-visuals" aria-hidden="false">
             <!-- Animated SVG illustration -->
-            <img class="hero-visual" src="assets/hero-anim.svg" alt="Animated illustration showing connected devices and AI" />
+            <img class="hero-visual" src="assets/hero-anim.svg" alt="Animated illustration showing connected devices and AI" data-aos="fade-left" data-aos-delay="150" />
 
             <!-- subtle animated pattern overlay -->
             <img class="hero-pattern" src="assets/tech-pattern.svg" alt="" aria-hidden="true" />
+
+            <!-- gallery of additional themed illustrations -->
+            <div class="visuals-gallery" aria-hidden="false">
+              <img src="assets/illustrations/embedded-sensor.svg" alt="Sensor illustration" loading="lazy" data-aos="zoom-in" data-aos-delay="220"/>
+              <img src="assets/illustrations/cloud-iot.svg" alt="Cloud & IoT illustration" loading="lazy" data-aos="zoom-in" data-aos-delay="260"/>
+              <img src="assets/illustrations/pcb.svg" alt="PCB illustration" loading="lazy" data-aos="zoom-in" data-aos-delay="300"/>
+              <img src="assets/illustrations/ai-chip.svg" alt="AI chip illustration" loading="lazy" data-aos="zoom-in" data-aos-delay="340"/>
+              <img src="assets/illustrations/network.svg" alt="Network illustration" loading="lazy" data-aos="zoom-in" data-aos-delay="380"/>
+              <img src="assets/illustrations/dashboard.svg" alt="Dashboard illustration" loading="lazy" data-aos="zoom-in" data-aos-delay="420"/>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="features" class="features container" aria-label="Services">
-        <div class="feature">
+        <div class="feature" data-aos="fade-up" data-aos-delay="80">
           <h3>Software & Cloud</h3>
           <p>Full‑stack software for device management, analytics, and tenant-facing applications.</p>
         </div>
-        <div class="feature">
+        <div class="feature" data-aos="fade-up" data-aos-delay="140">
           <h3>PCB & Hardware Design</h3>
           <p>Custom PCB design and prototyping optimized for reliability, cost, and manufacturability.</p>
         </div>
-        <div class="feature">
+        <div class="feature" data-aos="fade-up" data-aos-delay="200">
           <h3>Embedded AI</h3>
           <p>On-device AI and edge intelligence for real‑time automation and predictive maintenance.</p>
         </div>
       </section>
 
       <section id="about" class="container about">
-        <h2>About iBoy Technologies</h2>
-        <p>iBoy Technologies is a multidisciplinary engineering team building hardware and software solutions that bring intelligence to modern real estate. We combine PCB engineering, embedded firmware, cloud services, and AI to deliver end-to-end systems that scale.</p>
+        <h2 data-aos="fade-up">About iBoy Technologies</h2>
+        <p data-aos="fade-up" data-aos-delay="80">iBoy Technologies is a multidisciplinary engineering team building hardware and software solutions that bring intelligence to modern real estate. We combine PCB engineering, embedded firmware, cloud services, and AI to deliver end-to-end systems that scale.</p>
       </section>
 
       <section id="contact" class="container contact">
-        <h2>Get in touch</h2>
-        <p>Have questions or want a custom design? Email us at <a href="mailto:iboytechnologiesug@gmail.com">iboytechnologiesug@gmail.com</a>.</p>
+        <h2 data-aos="fade-up">Get in touch</h2>
+        <p data-aos="fade-up" data-aos-delay="60">Have questions or want a custom design? Email us at <a href="mailto:iboytechnologiesug@gmail.com">iboytechnologiesug@gmail.com</a>.</p>
       </section>
     </main>
 
@@ -76,5 +88,9 @@
         <p>&copy; iBoy Technologies — Built with ❤️</p>
       </div>
     </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="scripts/aos-init.js"></script>
   </body>
 </html>
