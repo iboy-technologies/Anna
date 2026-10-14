@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="80" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="20" height="20" rx="3" fill="#071E2B" opacity="0.05"/>
+  <g stroke="#0A4D78" stroke-width="1.2" fill="#fff">
+    <path d="M6 10h12v1H6z"/>
+    <path d="M6 6h5v4H6zM13 6h5v4h-5z"/>
+  </g>
+</svg>

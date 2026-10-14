@@ -1,74 +1,15 @@
-/* styles.css — Simple responsive styles for iBoy Technologies landing page */
-:root{
-  --bg: #f6fbff;
-  --card: #ffffff;
-  --text: #0b2940;
-  --muted:#506b7a;
-  --brand: #0a4d78; /* deep blue, matches logo */
-  --accent: #26a6d1;
-  --radius: 10px;
-}
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; color:var(--text);background:linear-gradient(180deg,#f8feff 0%,var(--bg) 100%)}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
-.site-header{background:transparent;padding:18px 0;position:sticky;top:0;z-index:40}
-.site-header .container{display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);font-weight:700}
-.logo img{height:48px;width:auto;border-radius:6px}
-.nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600}
-.nav a.cta{background:var(--brand);color:#fff;padding:10px 16px;border-radius:8px}
-.nav a:hover{opacity:0.9}
+/* Ad slot & consent banner styles */
+.ad-slot-container{display:block;max-width:980px;margin:28px auto;text-align:center}
+.ad-slot{display:block;min-height:90px;width:100%;max-width:100%;margin:0 auto}
 
-/* Hero layout */
-.hero{padding:88px 0;background:linear-gradient(180deg, rgba(10,77,120,0.06) 0%, transparent 60%);position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1fr 480px;gap:28px;align-items:center}
-.hero-copy{z-index:20}
-.hero h1{font-size:42px;margin:0 0 12px;line-height:1.05}
-.lead{color:var(--muted);font-size:18px;margin:0 0 18px}
-.hero-ctas .btn{font-size:16px}
+#ads-consent-banner{position:fixed;left:0;right:0;bottom:18px;background:linear-gradient(180deg, #fff, #f7fbff);border:1px solid rgba(10,77,120,0.06);box-shadow:0 12px 40px rgba(10,77,120,0.06);padding:14px 16px;display:flex;gap:12px;align-items:center;justify-content:center;z-index:9999;border-radius:10px;margin:0 12px}
+#ads-consent-banner .consent-text{font-size:15px;color:var(--muted);max-width:800px}
+#ads-consent-banner .consent-actions{display:flex;gap:8px}
+#ads-consent-banner .btn{background:var(--brand);color:#fff;padding:8px 12px;border-radius:8px;border:none;cursor:pointer}
+#ads-consent-banner .btn.secondary{background:#fff;color:var(--brand);border:1px solid rgba(10,77,120,0.12)}
 
-/* hero visuals */
-.hero-visuals{position:relative;display:flex;align-items:center;justify-content:center}
-.hero-visual{width:100%;max-width:420px;display:block;filter:drop-shadow(0 20px 30px rgba(10,77,120,0.12));transform:translateY(0);animation:float 6s ease-in-out infinite}
-.hero-pattern{position:absolute;inset:0;width:100%;height:100%;opacity:0.18;pointer-events:none;mix-blend-mode:screen;}
-
-/* Features */
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:56px 0}
-.feature{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(12,36,54,0.06);position:relative;overflow:hidden}
-.feature h3{margin:0 0 8px}
-.feature svg.decor{position:absolute;right:-20px;bottom:-10px;opacity:0.08}
-
-/* Animations */
-@keyframes float{
-  0%{transform:translateY(0)}
-  50%{transform:translateY(-10px)}
-  100%{transform:translateY(0)}
-}
-@keyframes pulse{
-  0%{transform:scale(1);opacity:0.9}
-  50%{transform:scale(1.04);opacity:1}
-  100%{transform:scale(1);opacity:0.9}
-}
-
-.about, .contact{padding:36px 0}
-.site-footer{padding:28px 0;text-align:center;color:var(--muted);border-top:1px solid rgba(11,41,64,0.04);background:transparent}
-.contact a{color:var(--brand);text-decoration:none;font-weight:600}
-/* utility */
-.center{display:flex;align-items:center;justify-content:center}
-
-@media (max-width:1000px){
-  .hero-grid{grid-template-columns:1fr 360px}
-}
-@media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr}
-  .hero-visuals{order:-1;margin-bottom:18px}
-  .hero h1{font-size:34px}
-  .features{grid-template-columns:repeat(2,1fr)}
-}
+/* keep existing ad/responsive rules */
 @media (max-width:600px){
-  .nav a{display:none}
-  .nav a.cta{display:inline-block}
-  .features{grid-template-columns:1fr}
-  .logo img{height:40px}
-  .hero{padding:48px 0}
+  .ad-slot{min-height:60px}
+  #ads-consent-banner{flex-direction:column;align-items:stretch}
 }
