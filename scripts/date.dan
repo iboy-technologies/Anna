@@ -1,0 +1,17 @@
+func run():
+	check_date()
+	return true
+
+func check_date():
+	$"..".load_s()
+	var time_int = $"..".s_date.split("-")
+	var year = str(time_int[0])
+	var month = str(time_int[1])
+	var date = str(time_int[2])
+	if date.ends_with("1"):
+		date+= "st"
+	elif date.ends_with("2"):
+		date+= "nd"
+	else:
+		date+= "th"
+	$"..".piper_speak("its the " + str(date)+ "of " + str(month.replace("01", "January").replace("02", "February").replace("03", "March").replace("04", "April").replace("05", "May").replace("06", "June").replace("07", "July").replace("08", "August").replace("09", "September").replace("10", "October").replace("11", "November").replace("12", "December"))+ str(year))

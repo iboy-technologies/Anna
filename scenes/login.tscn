@@ -1,0 +1,555 @@
+[gd_scene format=3 uid="uid://ddmvp3hv8yamh"]
+
+[ext_resource type="Script" uid="uid://c50opt7s3igto" path="res://scenes/engine_scripts/login.gd" id="1_pymad"]
+[ext_resource type="FontFile" uid="uid://1pa2r3onkjgg" path="res://GreatVibes-Regular.ttf" id="2_47b6t"]
+[ext_resource type="Shader" uid="uid://cp56g87sva5nt" path="res://shader/glass_panel.gdshader" id="2_cs5o2"]
+[ext_resource type="StyleBox" uid="uid://db8ltl18fdi1n" path="res://shader/base_stylebox.tres" id="3_47b6t"]
+[ext_resource type="FontFile" uid="uid://c66c06g3jipbb" path="res://Roboto-Medium.ttf" id="4_r3fp8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpthc"]
+bg_color = Color(0.9443793, 0.6472541, 0.2228097, 1)
+corner_radius_bottom_right = 532
+corner_radius_bottom_left = 546
+corner_detail = 20
+shadow_color = Color(0, 0, 0, 0.101960786)
+shadow_size = 23
+shadow_offset = Vector2(3.805, 14.07)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47b6t"]
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 100
+border_color = Color(0.88864106, 0.8694159, 0.8578822, 1)
+border_blend = true
+corner_radius_top_left = 41
+corner_radius_bottom_right = 532
+corner_radius_bottom_left = 546
+corner_detail = 20
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 13
+shadow_offset = Vector2(-5.71, 17.87)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_47b6t"]
+shader = ExtResource("2_cs5o2")
+shader_parameter/brightness = 0.1
+shader_parameter/chromatic_shift_amount = 0.2
+shader_parameter/bend_amount = 0.4
+shader_parameter/blur_amount = 2.0
+shader_parameter/grain_amount = 0.05
+shader_parameter/curve_light_blend = 0.5
+shader_parameter/rim_light_blend = 0.8
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bw5rt"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 5
+shadow_color = Color(0.6, 0.25490198, 0.05882353, 0.07058824)
+shadow_size = 9
+shadow_offset = Vector2(2.41, 2.55)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cs5o2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 14
+border_width_top = 14
+border_width_right = 14
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 0.7372549)
+border_blend = true
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+corner_detail = 10
+shadow_color = Color(0.61156183, 0.53756505, 0.48303437, 0.12156863)
+shadow_size = 6
+
+[sub_resource type="Animation" id="Animation_31byv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(158, 1583.665)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../ball:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../ball:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(473, 1878.915)]
+}
+
+[sub_resource type="Animation" id="Animation_bw5rt"]
+resource_name = "get_started"
+length = 0.51
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ball:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.51),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(158, 1583.665), Vector2(158, 784.68)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../ball:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.51),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(473, 1878.915), Vector2(473, 1322.65)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_31byv"]
+_data = {
+&"RESET": SubResource("Animation_31byv"),
+&"get_started": SubResource("Animation_bw5rt")
+}
+
+[sub_resource type="Animation" id="Animation_47b6t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(158, 778)]
+}
+
+[sub_resource type="Animation" id="Animation_r3fp8"]
+resource_name = "logged"
+
+[sub_resource type="Animation" id="Animation_pymad"]
+resource_name = "login"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5207525, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(160.968, 777.606), Vector2(163.02254, 783.91077), Vector2(164.878, 789.296)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nw41r"]
+_data = {
+&"RESET": SubResource("Animation_47b6t"),
+&"logged": SubResource("Animation_r3fp8"),
+&"login": SubResource("Animation_pymad")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jngj"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 70
+corner_radius_bottom_right = 70
+corner_detail = 14
+shadow_color = Color(0.74509805, 0.48235294, 0, 1)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3fp8"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.74509805, 0.34901962, 0, 1)
+border_blend = true
+corner_radius_top_left = 70
+corner_radius_bottom_right = 70
+corner_detail = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31byv"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color(0.8641548, 0.77915883, 0.75802636, 1)
+border_blend = true
+corner_radius_top_left = 105
+corner_radius_top_right = 100
+corner_radius_bottom_right = 98
+corner_radius_bottom_left = 112
+corner_detail = 20
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(2.41, 2.29)
+
+[sub_resource type="Animation" id="Animation_1u3ka"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(473, 1423)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tbijj"]
+resource_name = "change"
+length = 1.52
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0333333, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(473, 1423), Vector2(473, 1953.275), Vector2(473, 1878.915)]
+}
+
+[sub_resource type="Animation" id="Animation_wlyqo"]
+resource_name = "loading"
+length = 3.0250000000000004
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(323.39, 1400.6), Vector2(369.785, 1412.585), Vector2(473, 1423), Vector2(577.19, 1413.505), Vector2(650, 1395.05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.945, 0.945), Vector2(1, 1), Vector2(0.935, 0.935)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tbijj"]
+_data = {
+&"RESET": SubResource("Animation_1u3ka"),
+&"change": SubResource("Animation_tbijj"),
+&"loading": SubResource("Animation_wlyqo")
+}
+
+[node name="Control" type="Control" unique_id=1128087898]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pymad")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1740497312]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -342.0
+offset_right = 303.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="." unique_id=834898255]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -442.5
+offset_right = 540.0
+offset_bottom = 442.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jpthc")
+
+[node name="Panel3" type="Panel" parent="Panel2" unique_id=494172414]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -538.46
+offset_top = -476.0
+offset_right = 537.68994
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_47b6t")
+
+[node name="Label" type="Label" parent="Panel2" unique_id=1489588253]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.0
+offset_top = 178.5
+offset_right = 168.0
+offset_bottom = 408.5
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.84313726, 0.57254905, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.1254902)
+theme_override_constants/shadow_offset_x = 9
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = ExtResource("2_47b6t")
+theme_override_font_sizes/font_size = 183
+text = "Anna"
+
+[node name="Panel" type="Panel" parent="." unique_id=1531166202]
+material = SubResource("ShaderMaterial_47b6t")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16296296
+anchor_top = 0.3518018
+anchor_right = 0.8657407
+anchor_bottom = 0.6738739
+offset_left = -18.0
+offset_top = -3.0
+offset_right = -18.0
+offset_bottom = -2.9799805
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(379.03198, 357.39398)
+theme_override_styles/panel = ExtResource("3_47b6t")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel" unique_id=772365567]
+layout_mode = 0
+anchor_left = 0.023715414
+anchor_top = 0.2027972
+anchor_right = 0.9789196
+anchor_bottom = 0.3006993
+theme_override_colors/font_color = Color(0.7607843, 0.35686275, 0, 1)
+theme_override_fonts/font = ExtResource("4_r3fp8")
+theme_override_font_sizes/font_size = 59
+text = "What should Anna call you?"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel" unique_id=444235478]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2480217
+anchor_top = 0.6343139
+anchor_right = 0.9011965
+anchor_bottom = 0.7322161
+theme_override_colors/font_color = Color(0.91629905, 0, 0.078357376, 1)
+theme_override_fonts/font = ExtResource("4_r3fp8")
+theme_override_font_sizes/font_size = 36
+text = "please enter a name!"
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="Panel" unique_id=536360646]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0513834
+anchor_top = 0.46153846
+anchor_right = 0.9631094
+anchor_bottom = 0.63496506
+offset_bottom = -3.0517578e-05
+theme_override_colors/font_color = Color(0.75686276, 0.35686275, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.9661742, 0.84979117, 0.769553, 0.72156864)
+theme_override_colors/caret_color = Color(0.7529412, 0.3529412, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_bw5rt")
+theme_override_styles/focus = SubResource("StyleBoxFlat_bw5rt")
+placeholder_text = "Enter username"
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Panel" unique_id=1037401837]
+layout_mode = 0
+anchor_left = 0.37417656
+anchor_top = 0.7762238
+anchor_right = 0.6403162
+anchor_bottom = 0.9020979
+theme_override_colors/font_color = Color(0.7607843, 0.35686275, 0, 1)
+theme_override_font_sizes/font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxFlat_cs5o2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cs5o2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cs5o2")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cs5o2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cs5o2")
+text = "Next →"
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel" unique_id=2136606305]
+libraries/ = SubResource("AnimationLibrary_31byv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1393614240]
+libraries/ = SubResource("AnimationLibrary_nw41r")
+speed_scale = 1.035
+
+[node name="Button" type="Button" parent="." unique_id=987547876]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041666668
+anchor_top = 0.91756755
+anchor_right = 0.9638889
+anchor_bottom = 0.98738736
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.78431374, 0.4509804, 0, 1)
+theme_override_fonts/font = ExtResource("4_r3fp8")
+theme_override_font_sizes/font_size = 57
+theme_override_styles/normal = SubResource("StyleBoxFlat_3jngj")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_3jngj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r3fp8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3jngj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3jngj")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3jngj")
+text = "Get Started"
+metadata/_edit_use_anchors_ = true
+
+[node name="ball" type="Panel" parent="." unique_id=1404105831]
+visible = false
+layout_mode = 0
+offset_left = 473.0
+offset_top = 1423.0
+offset_right = 606.9999
+offset_bottom = 1552.999
+pivot_offset = Vector2(68, 65)
+theme_override_styles/panel = SubResource("StyleBoxFlat_31byv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ball" unique_id=2140130638]
+libraries/ = SubResource("AnimationLibrary_tbijj")
+speed_scale = 2.845
+
+[node name="Label2" type="Label" parent="." unique_id=859205834]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.0
+offset_top = 1624.0
+offset_right = 142.0
+offset_bottom = 1693.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.84313726, 0.57254905, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.1254902)
+theme_override_fonts/font = ExtResource("4_r3fp8")
+theme_override_font_sizes/font_size = 49
+text = "Setting up..."
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_next_pressed"]
+[connection signal="animation_finished" from="Panel/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="Button" to="." method="_on_get_started_pressed"]
+[connection signal="animation_finished" from="ball/AnimationPlayer" to="." method="_on_r_animation_finished"]
+[connection signal="animation_started" from="ball/AnimationPlayer" to="." method="_on_animation_player_animation_started"]

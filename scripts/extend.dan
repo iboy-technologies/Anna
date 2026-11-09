@@ -1,0 +1,7 @@
+func run():
+	#call your custom function from here.
+	extender()
+	return true
+
+func extender():
+	$CodeEdit.show()

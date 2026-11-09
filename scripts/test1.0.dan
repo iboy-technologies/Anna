@@ -1,0 +1,7 @@
+func run():
+	#call your custom function from here. $".." is the parent node
+	test()
+	return true
+
+func test():
+	$"..".piper_speak("dany is the best")

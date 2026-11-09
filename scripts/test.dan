@@ -1,0 +1,7 @@
+func run():
+	better()
+	return true
+
+
+func better():
+	print("im better than you")

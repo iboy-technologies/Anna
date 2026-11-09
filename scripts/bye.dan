@@ -1,0 +1,17 @@
+func run():
+	bye()
+	return true
+
+func bye():
+	var parting = ""
+	var time = int($"..".s_time.split(":")[0])
+	if time >4 && time <20:
+		parting = "day"+ Appstate.user
+	else:
+		parting = "night" + Appstate.user
+	$"..".piper_speak("okay have a good "+parting)
+	$"../tts".finished.connect(done)
+	print("gnfngd")
+
+func done():
+	get_tree().quit()

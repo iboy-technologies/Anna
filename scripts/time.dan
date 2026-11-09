@@ -1,0 +1,13 @@
+func run():
+	check_time()
+	return true
+
+func check_time():
+	$"..".load_s()
+	var time_int = $"..".s_time.split(":")
+	var hour = int(time_int[0])
+	var minute = int(time_int[1])
+	if minute <40:
+		$"..".piper_speak("its " + str(minute)+ "minutes past" + str(hour))
+	else:
+		$"..".piper_speak("its " + str(60-minute)+ "minutes to" + str(hour+1))

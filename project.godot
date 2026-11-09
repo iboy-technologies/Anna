@@ -1,0 +1,63 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="ANNA6.0"
+config/version="6"
+run/main_scene="uid://ddwanchbf5kl5"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/stretch_mode=4
+boot_splash/image="uid://bt0f6jag64sbr"
+config/icon="uid://bt0f6jag64sbr"
+
+[audio]
+
+buses/default_bus_layout="uid://cm5pw8ps4vnuj"
+general/text_to_speech=true
+driver/enable_input=true
+
+[autoload]
+
+Tts="*uid://bse7n5wv5mnvh"
+Appstate="*uid://dhwk6g1hvy71i"
+Layer1="*uid://c8hbav4blxfs6"
+Layer2="*uid://d14blv4vc05v1"
+Layer3="*uid://dwnpqctxx81w4"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=2220
+window/size/mode=2
+window/stretch/mode="canvas_items"
+window/handheld/orientation=1
+
+[dotnet]
+
+project/assembly_name="ANNA6.0"
+
+[editor_plugins]
+
+enabled=PackedStringArray()
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
